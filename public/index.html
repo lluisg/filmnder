@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <form>
+      <div class="imgcontainer">
+        <img src="images/avatar.png" alt="Avatar" class="avatar">
+        <a> Filmnder </a>
+      </div>
+
+      <div class="container">
+        <label for="name_in"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="name_in" required>
+
+        <label for="pass_in"><b>Password</b></label>
+        <input type="text" placeholder="Enter Password" name="pass_in" required>
+
+        <button type="button" onclick="checkUser()">Login</button>
+      </div>
+    </form>
+
+  <script src="login.js"></script>
+  </body>
+</html>

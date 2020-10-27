@@ -1,0 +1,23 @@
+{
+  "name": "tinderfilms",
+  "version": "1.0.0",
+  "description": "You and your partner can match which film to watch next.",
+  "main": "filmServer.js",
+  "scripts": {
+    "nodemon": "nodemon filmsServer.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node filmServer"
+  },
+  "author": "Lluis Guardia",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.2",
+    "nodemon": "^2.0.6",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^2.3.0",
+    "underscore": "^1.11.0"
+  }
+}
