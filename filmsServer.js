@@ -9,7 +9,7 @@ app.use(Express.json());
 require('dotenv').config()
 var favicon = require('serve-favicon');
 var path = require('path');
-app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
+app.use(favicon(path.join(__dirname,'public','images','logo.ico')));
 var _ = require('underscore');
 
 const CONNECTION_URL = process.env.CONNECTION_URL;

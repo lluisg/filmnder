@@ -7,15 +7,38 @@
     <meta charset="utf-8" />
   </head>
   <body>
-
-    <div class="info">
+    <div class="imgcontainer">
+      <img src="images/logo.png" alt="Logo" class="logo">
+      <a> Filmnder </a>
     </div>
+
+    <div class="info_container">
+      <a href="https://www.imdb.com/title/tt0118799/" target="_blank">
+        <img class=imdb src="images/imdb.png"/>
+      </a>
+
+      <div class="poster_container">
+        <img src="images/poster.jpg" alt="Film Poster" class="poster">
+        <div class="overlay">
+          <div class="info">
+            <ul style="list-style-type:none;">
+              <li>Year: 2002</li>
+              <li>Duration: 220'</li>
+              <li>Director: Steven Spielbierg</li>
+              <li>Genre: Comedy, Drama</li>
+              <li>Rating: 7.9</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a id=title>Title of the Film</a>
+    </div>
+
     <div class="selection">
-      <button type="button" id=si onclick="si()">Like</button>
-      <button type="button" id=no onclick="no()">Dislike</button>
-      <button type="button" onclick="meh()">Meh</button>
-      <button type="button" onclick="vista()">Seen</button>
-      <button type="button" onclick="vistaOK()">SeenButOK</button>
+      <button type="button" id=repeat onclick="repeat()"></button>
+      <button type="button" id=dislike onclick="bad()"></button>
+      <button type="button" id=like onclick="good()"></button>
+      <button type="button" id=seen onclick="seen()"></button>
     </div>
 
     <script src="main.js"></script>

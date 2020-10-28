@@ -3,3 +3,4 @@ node_modules
 IMDb_movies.csv
 IMDb_ratings.csv
 IMDb_title_principals.csv
+aux*
