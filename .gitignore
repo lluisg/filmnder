@@ -1,3 +1,5 @@
 .env
 node_modules
-update*
+IMDb_movies.csv
+IMDb_ratings.csv
+IMDb_title_principals.csv
