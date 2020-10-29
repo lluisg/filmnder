@@ -12,13 +12,26 @@
       <a> Filmnder </a>
     </div>
 
+    <div class="options_container">
+      <button type="button" class="options_logo" id=optionsON onclick="optionsButtonOFF()"></button>
+      <button type="button" class="options_logo" id=optionsOFF onclick="optionsButtonON()"></button>
+      <div class="options_buttons_container" id="options_buttons">
+        <ul style="list-style-type:none;">
+          <li><button type="button" class="options" id=matches onclick="showMatches()">Matches</button></li>
+          <li><button type="button" class="options" id=alone onclick="showAlone()">Alone</button></li>
+          <li><button type="button" class="options" id=changev onclick="changeValoration()">Change</button></li>
+        </ul>
+        <a id="username">Name</a>
+      </div>
+    </div>
+
     <div class="info_container">
       <a href="https://www.imdb.com/title/tt0118799/" target="_blank">
         <img class=imdb src="images/imdb.png"/>
       </a>
 
       <div class="poster_container">
-        <img src="images/poster.jpg" alt="Film Poster" class="poster">
+        <img src="images/poster.jpg" alt="Film Poster" id="image_poster" class="poster">
         <div class="overlay">
           <div class="info">
             <ul style="list-style-type:none;">
@@ -35,10 +48,10 @@
     </div>
 
     <div class="selection">
-      <button type="button" id=repeat onclick="repeat()"></button>
-      <button type="button" id=dislike onclick="bad()"></button>
-      <button type="button" id=like onclick="good()"></button>
-      <button type="button" id=seen onclick="seen()"></button>
+      <button type="button" class="valoration" id=repeat onclick="filmRepeat()"></button>
+      <button type="button" class="valoration" id=dislike onclick="filmDisliked()"></button>
+      <button type="button" class="valoration" id=like onclick="filmLiked()"></button>
+      <button type="button" class="valoration" id=seen onclick="filmSeen()"></button>
     </div>
 
     <script src="main.js"></script>
