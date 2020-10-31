@@ -141,6 +141,12 @@
     #seen, #repeat{
       width: 7vw;
     }
+
+    #username{
+      font-family: serif;
+      text-shadow: 2px 2px 3px pink;
+      font-size: 3vw;
+    }
 }
 @media only screen and (orientation: portrait) {
     #like, #dislike{
@@ -148,5 +154,10 @@
     }
     #seen, #repeat{
       width: 7vh;
+    }
+    #username{
+      font-family: serif;
+      text-shadow: 2px 2px 3px pink;
+      font-size: 2vh;
     }
 }

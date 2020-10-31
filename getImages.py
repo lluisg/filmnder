@@ -76,7 +76,6 @@ if __name__ == "__main__":
     print('Done writing names and urls')
 
 # Save Dataframe to CSV ---------------------------------------------------
-    index = 0
     urls = {}
 
     with open('list_urls.txt', 'r') as f:

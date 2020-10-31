@@ -55,3 +55,36 @@ app.post('/checkUsr', async (request, response) => {
           }
       });
 });
+
+app.get("/getInfo", (request, response) => {
+  db.collection('films').find().sort({ _id:1 }).toArray((error, result) => {
+    if(error) {
+      console.log('Error Getting INFO DB (Film Server)')
+      return response.status(500).send(error);
+    }
+    console.log('Returned Info DB without problem');
+    response.json({result});
+  });
+});
+
+app.get("/getUrls", (request, response) => {
+  db.collection('url_images').find().sort({ _id:1 }).toArray((error, result) => {
+    if(error) {
+      console.log('Error Getting URLS DB (Film Server)')
+      return response.status(500).send(error);
+    }
+    console.log('Returned Urls DB without problem');
+    response.json({result});
+  });
+});
+
+app.get("/getRelations", (request, response) => {
+  db.collection('relations').find().sort({ _id:1 }).toArray((error, result) => {
+    if(error) {
+      console.log('Error Getting Relations DB (Film Server)')
+      return response.status(500).send(error);
+    }
+    console.log('Returned Relations DB without problem');
+    response.json({result});
+  });
+});
