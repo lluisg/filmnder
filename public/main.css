@@ -1,111 +1,83 @@
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%; /* full window width */
-    text-align: center;
+/* LOGO OF ABOVE ----------------------------------------------------------- */
+
+#web_name{
+  font-family: serif;
+  text-shadow: 2px 2px 3px pink;
+  font-size: 1rem;
 }
 
-/* VALORATION BUTTONS ------------------------------------------------------- */
-.selection {
-  margin: auto;
-  width: 50%;
-  position: relative;
-  width: 70vh;
-  height: 15vh;
-  /* border: 2px solid black; */
+#img_logo {
+  width: 2rem;
 }
 
-.valoration {
-  margin: 8px 0;
+/* OPTION BUTTONS ----------------------------------------------------------- */
+
+#optionsONOFF{
   cursor: pointer;
-  position: relative;
-  left: 10%;
 
-  background-color: #FFFFFF;
-  color:black;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 
-  border-radius: 50%;
-  border: 10px solid rgba(194, 194, 163, .5);
+  border-radius: 40%;
+  border: 0.5rem solid rgba(194, 194, 163, .5);
+  background-image: url(images/options.png);
 }
 
-#like{
-  padding: 40px 45px;
-  background-image: url(images/green-heart.png);
-}
-#dislike{
-  padding: 40px 45px;
-  background-image: url(images/red-cross.png);
-}
-#seen{
-  padding: 20px 22px;
-  background-image: url(images/seen.png);
-}
-#repeat{
-  padding: 20px 22px;
-  background-image: url(images/yellow-repeat.png);
-}
+.options_h{
+  cursor: pointer;
 
-
-/* LOGO IMAGE --------------------------------------------------------------- */
-.imgcontainer {
-  text-align: center;
-  font-family: serif;
-  color: red;
+  font-family: 'Raleway',sans-serif;
+  font-size: 3vh;
+  font-weight: 800;
+  margin: 0 2vh;
+  padding: 1vh 2.5vw;
   text-transform: uppercase;
-  text-shadow: 2px 2px 3px pink;
-  font-weight: bold;
-  font-size: 20px;
+
+  background-color: #FFFFFF;
+  border-radius: 12px;
+
+  border: 0.25rem solid black;
+}
+.options_h:hover{
+  background-color: rgba(50, 50, 150, 0.3);
 }
 
-img.logo {
-  width: 2%;
-  border-radius: 50%;
+.options_v{
+  cursor: pointer;
+
+  font-family: 'Raleway',sans-serif;
+  font-size: 1vw;
+  font-weight: 800;
+  margin: 2vw 0;
+  padding: 2vh 0;
+  text-transform: uppercase;
+
+  background-color: #FFFFFF;
+  border-radius: 12px;
+
+  border: 0.25rem solid black;
+}
+.options_v:hover{
+  background-color: rgba(50, 50, 150, 0.3);
 }
 
 /* INFORMATION INSIDE BOX --------------------------------------------------- */
-.info_container {
-  margin: auto;
-  padding: 5px;
-  width: 65vh;
-  height: 70vh;
-  border: 3px solid black;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  text-align: center;
+
+#info_container{
+  height:75vh;
+  border: 5px solid black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5%;
 }
 
-img.imdb{
-  position: absolute;
-  max-width: 7%;
-  height: auto;
-  left: 60%;
-  border: 1px solid black;
-  border-radius: 20%;
-  z-index:2;
-}
-
-.poster_container{
+#poster_container{
+  background-color: #000000;
   position: relative;
-  /* display: block; */
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  height: 90%;
-  z-index:1;
-  border: 3px solid black;
+  border: 0.3vw solid black;
 }
 
-img.poster {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.overlay {
+.overlay{
   position: absolute;
   top: 0;
   bottom: 0;
@@ -117,14 +89,14 @@ img.poster {
   transition: .5s ease;
   background-color: #000000;
 }
-.poster_container:hover .overlay {
+.overlay:hover{
   opacity: 1;
 }
 
 .info {
-  line-height : 50px;
+  line-height : 7vh;
   color: white;
-  font-size: 20px;
+  /* font-size: 1.5vw; */
   text-align: left;
 }
 
@@ -133,92 +105,48 @@ img.poster {
   font-family: "Arial Black", Gadget, sans-serif;
   font-size: xx-large;
   font-weight: bold;
+  width: 100%;
+  padding-top: 3vh;
 }
 
-/* OPTION BUTTONS ----------------------------------------------------------- */
-.options_container{
-  right: 3%;
-  width: 25%;
-  height: 80%;
-  position: absolute;
+/* IMDB BUTTON -------------------------------------------------------------- */
 
-  /* border: 3px solid pink; */
-}
-.options_logo{
-  position: absolute;
-  float:right;
-  right: 3%;
+#imdb_button{
   cursor: pointer;
+  max-width: 150px;
+}
 
-  background-color: #FFFFFF;
+/* VALORATION BUTTONS ------------------------------------------------------- */
+
+.valoration {
+  cursor: pointer;
+  position: relative;
+
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 
-  border-radius: 40%;
-  border: 10px solid rgba(194, 194, 163, .5);
-  padding: 10% 10%;
-  background-image: url(images/options.png);
-  z-index:2;
+  border-radius: 50%;
+  border: 0.5vw solid rgba(194, 194, 163, .5);
 }
 
-.options_buttons_container{
-  width: 100%;
-  height: 100%;
-  background-color: rgba(125, 125, 125, 0.1);
-  right: 0;
-  z-index:1;
-  border: 1px solid black;
-  border-radius: 5%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  opacity: 0;
-  margin-top: -5px;
+@media only screen and (orientation: landscape) {
+    #btn_group{
+      margin-left: -5vw;
+    }
 
-  /* border: 3px solid blue; */
+    #like, #dislike{
+      width: 9vw;
+    }
+    #seen, #repeat{
+      width: 7vw;
+    }
 }
-.options{
-  position: relative;
-  cursor: pointer;
-
-  color: #000000;
-  font-family: 'Raleway',sans-serif;
-  font-size: 20px;
-  font-weight: 800;
-  margin: 10% 0 10%;
-  text-align: left;
-  text-transform: uppercase;
-
-  background-color: rgba(125, 125, 125, 0.5);
-  /* background-color: #FFFFFF; */
-  padding: 5% 10%;
-  border-radius: 12px;
-  border: 1px solid black;
-  /* box-shadow: 1px 1px 10px grey; */
-  width: 50%;
-  display: block;
-}
-
-#optionsON{
-  opacity: 1;
-  z-index:1;
-}
-#optionsOFF{
-  opacity: 0;
-  z-index:2;
-}
-
-#username{
-  color: rgba(255, 26, 26, 1);
-  font-family: 'Raleway',sans-serif;
-  font-size: 20px;
-  font-weight: 800;
-  margin: 10% 0 10%;
-  text-align: center;
-  bottom: 1px;
-  position: relative;
-
-}
-.options:hover{
-  background-color: rgba(125, 125, 125, 0.2);
-  /* background-color: rgba(255, 128, 128, 0.75); */
+@media only screen and (orientation: portrait) {
+    #like, #dislike{
+      width: 12vh;
+    }
+    #seen, #repeat{
+      width: 7vh;
+    }
 }

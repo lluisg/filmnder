@@ -2,8 +2,16 @@ var queryString = decodeURIComponent(window.location.search);
 queryString = queryString.substring(1);
 var user = queryString.split("=")[1];
 console.log('User: '+user);
-document.getElementById('username').innerHTML = user;
 
+// Hide options menu
+document.getElementById('options_group_v').style.opacity = "0";
+document.getElementById('options_group_h').style.opacity = "0";
+document.getElementById('matches_v').disabled = true;
+document.getElementById('alone_v').disabled = true;
+document.getElementById('valoration_v').disabled = true;
+document.getElementById('matches_h').disabled = true;
+document.getElementById('alone_h').disabled = true;
+document.getElementById('valoration_h').disabled = true;
 
 // change font size whether the text is larger or not
 // document.getElementById("title").style.fontSize = "";
@@ -41,21 +49,32 @@ function changeValoration(){
   window.location.href='/valorations.html?user='+user;
 }
 
+function optionsButtonONOFF(){
+  console.log('button on/off');
+  var opv=document.getElementById('options_group_v').style.opacity;
+  var oph=document.getElementById('options_group_h').style.opacity;
 
-function optionsButtonON(){
-  console.log('button on');
-  document.getElementById('options_buttons').style.opacity = "1";
-  document.getElementById('optionsON').style.opacity = "1";
-  document.getElementById('optionsON').style.zIndex = "2";
-  document.getElementById('optionsOFF').style.opacity = "0";
-  document.getElementById('optionsOFF').style.zIndex = "1";
-}
+  if(opv == 1 || oph == 1){
+    console.log('hide')
+    document.getElementById('options_group_v').style.opacity = "0";
+    document.getElementById('options_group_h').style.opacity = "0";
 
-function optionsButtonOFF(){
-  console.log('button off');
-  document.getElementById('options_buttons').style.opacity = "0";
-  document.getElementById('optionsON').style.opacity = "0";
-  document.getElementById('optionsON').style.zIndex = "1";
-  document.getElementById('optionsOFF').style.opacity = "1";
-  document.getElementById('optionsOFF').style.zIndex = "2";
+    document.getElementById('matches_v').disabled = true;
+    document.getElementById('alone_v').disabled = true;
+    document.getElementById('valoration_v').disabled = true;
+    document.getElementById('matches_h').disabled = true;
+    document.getElementById('alone_h').disabled = true;
+    document.getElementById('valoration_h').disabled = true;
+  }else{
+    console.log('show')
+    document.getElementById('options_group_v').style.opacity = "1";
+    document.getElementById('options_group_h').style.opacity = "1";
+
+    document.getElementById('matches_v').disabled = false;
+    document.getElementById('alone_v').disabled = false;
+    document.getElementById('valoration_v').disabled = false;
+    document.getElementById('matches_h').disabled = false;
+    document.getElementById('alone_h').disabled = false;
+    document.getElementById('valoration_h').disabled = false;
+  }
 }
