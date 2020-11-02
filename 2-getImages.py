@@ -51,11 +51,12 @@ if __name__ == "__main__":
     #get film names
     df_films = pd.read_csv('IMDb_DB.csv')
 
-    with open('list_films.txt') as f:
+    # reads all the films already written
+    with open('list_films.txt', 'a+') as f:
         content = f.readlines()
     list_films = [line.rstrip('\n') for line in content]
 
-    with open('list_urls.txt', 'a') as u, open('list_films.txt', 'a') as f, open('list_index.txt', 'a') as i:
+    with open('list_urls.txt', 'a+') as u, open('list_films.txt', 'a+') as f, open('list_index.txt', 'a+') as i:
         for index, row in df_films.iterrows():
 
             film_name = row['original_title']
@@ -63,9 +64,10 @@ if __name__ == "__main__":
             film_name = unidecode.unidecode(film_name)
             exclude = set(string.punctuation)
             film_name = ''.join(ch for ch in film_name if ch not in exclude)
+            film_name_search = film_name+" film"
 
             if film_name not in list_films:
-                turl = bing_image_search(film_name+' film')
+                turl = bing_image_search(film_name_search)
                 if turl != None:
                     u.write(turl+'\n')
                     f.write(film_name+'\n')

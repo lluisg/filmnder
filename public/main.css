@@ -103,10 +103,9 @@
 #title{
   display:inline-block;
   font-family: "Arial Black", Gadget, sans-serif;
-  font-size: xx-large;
+  line-height : 90%;
   font-weight: bold;
-  width: 100%;
-  padding-top: 3vh;
+  padding-top: 1vh;
 }
 
 /* IMDB BUTTON -------------------------------------------------------------- */

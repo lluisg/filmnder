@@ -184,7 +184,11 @@ function updateWebValues(ind){
   if(ind == -1){
     document.getElementById('image_poster').src = 'images/everythingdone.jpg';
   }else{
-    document.getElementById('title').innerHTML = info_films[ind]['title'];
+    title = document.getElementById('title')
+    title.innerHTML = info_films[ind]['title'];
+    title_div = document.getElementById('title_div')
+    setFontSize(info_films[ind]['title'], title, title_div);
+
     document.getElementById('year').innerHTML = 'Year: '+info_films[ind]['year'];
     document.getElementById('duration').innerHTML = 'Duration: '+info_films[ind]['duration'];
     document.getElementById('director').innerHTML = 'Director: '+info_films[ind]['director'];
@@ -207,6 +211,22 @@ function checkMatch(ind){
     console.log('No match found');
   }
 }
+
+function setFontSize(text, element, border){
+  //** defines the font size of the text in the element that don't surpass the borders **//
+  var actual_width = 1000000000;
+  var actual_height = 10000000000;
+  var actual_font_size = 9;
+
+  while(actual_height > border.offsetHeight || actual_width > border.offsetWidth){
+    element.style.fontSize = actual_font_size+'vw';
+    actual_height = element.offsetHeight;
+    actual_width = element.offsetWidth;
+    actual_font_size -= 0.5;
+  }
+  console.log('Defined font size of: ', actual_font_size);
+}
+
 
 async function getData(){
   // Get Films info

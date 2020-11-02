@@ -1329,6 +1329,7 @@ Jason Bourne
 Bad Boys for Life
 Project X
 Outbreak
+Halloween
 Kong Skull Island
 Burnt
 Madagascar Escape 2 Africa
@@ -1374,6 +1375,7 @@ John Carter
 Talladega Nights The Ballad of Ricky Bobby
 Saw II
 The Forbidden Kingdom
+Robin Hood
 Ghostbusters II
 Austin Powers The Spy Who Shagged Me
 Secret Window
@@ -1503,6 +1505,7 @@ The Hangover Part II
 The Iron Lady
 Once Upon a Time in Mexico
 The Longest Yard
+Alice in Wonderland
 Happy Feet
 Fast  Furious Presents Hobbs  Shaw
 The Invention of Lying
@@ -1549,6 +1552,7 @@ Funny People
 Terminator Genisys
 Terminator 3 Rise of the Machines
 47 Ronin
+Total Recall
 Tomb Raider
 Entrapment
 Date Night
@@ -1596,11 +1600,13 @@ Jack the Giant Slayer
 Daddys Home
 Tower Heist
 Dark Shadows
+The Thing
 Crank High Voltage
 The Legend of Tarzan
 The Men Who Stare at Goats
 Mirrors
 300 Rise of an Empire
+The Karate Kid
 Jack Ryan Shadow Recruit
 Inferno
 Trainwreck
@@ -1643,6 +1649,7 @@ Evolution
 I Am Number Four
 Birds of Prey And the Fantabulous Emancipation of One Harley Quinn
 Hansel  Gretel Witch Hunters
+Halloween
 The Monuments Men
 The Waterboy
 San Andreas
@@ -1663,6 +1670,7 @@ The Mexican
 Two Weeks Notice
 Transporter 3
 Cars 2
+RoboCop
 What Happens in Vegas
 27 Dresses
 The Sorcerers Apprentice
@@ -1680,6 +1688,7 @@ Suicide Squad
 Miami Vice
 Sucker Punch
 Night at the Museum Battle of the Smithsonian
+Hercules
 The Tourist
 The Fast and the Furious Tokyo Drift
 Immortals
@@ -1713,6 +1722,7 @@ The Grudge
 Hostel
 Abraham Lincoln Vampire Hunter
 The Great Wall
+Carrie
 The 6th Day
 Dirty Grandpa
 Into the Woods
@@ -1754,6 +1764,7 @@ Identity Thief
 Noah
 The Watch
 The Three Musketeers
+Planet of the Apes
 Wrath of the Titans
 Coyote Ugly
 Battle Los Angeles
@@ -1807,6 +1818,7 @@ Snakes on a Plane
 Annabelle
 Gods of Egypt
 Batman Forever
+The Mummy
 Max Payne
 Scary Movie 2
 Daredevil
@@ -1820,6 +1832,7 @@ Jupiter Ascending
 Transformers The Last Knight
 Independence Day Resurgence
 Ghost Rider
+Ghostbusters
 The Mummy Tomb of the Dragon Emperor
 Jennifers Body
 Paul Blart Mall Cop
