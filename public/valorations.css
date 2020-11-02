@@ -1,1 +1,19 @@
+#img_logo {
+  width: 2rem;
+}
 
+
+@media only screen and (orientation: landscape) {
+    #username{
+      font-family: serif;
+      text-shadow: 2px 2px 3px pink;
+      font-size: 3vw;
+    }
+}
+@media only screen and (orientation: portrait) {
+    #username{
+      font-family: serif;
+      text-shadow: 2px 2px 3px pink;
+      font-size: 2vh;
+    }
+}

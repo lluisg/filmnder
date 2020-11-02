@@ -161,3 +161,13 @@
       font-size: 2vh;
     }
 }
+
+/* POP UP WHEN MATCH -------------------------------------------------------- */
+#matchlogo{
+  width: 5vw;
+}
+#match_title{
+  font-size: 2vw;
+  color: #000000;
+  font-weight: 600;
+}

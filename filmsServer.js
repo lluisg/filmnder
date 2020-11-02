@@ -88,3 +88,28 @@ app.get("/getRelations", (request, response) => {
     response.json({result});
   });
 });
+
+app.post('/updateRelation', async (request, response) => {
+  /*
+  pass the [username, film_id, valoration]
+  returns if the user is in the database or not
+  */
+  console.log('I got a request!');
+  console.log(request.body.data);
+  user = request.body.data.username
+  id = request.body.data.id
+  val = request.body.data.valoration
+  console.log(user, id, val)
+
+  db.collection("relations").updateOne({_id:id}, {$set: { [user]: val }},  function(error, result) {
+    if(error) {
+        console.log('erroor updating relations')
+        return response.status(500).send(error);
+    }else{
+      console.log("Successfully updated the relations");
+    }
+    response.json({
+      status:'updated'
+    });
+  });
+});

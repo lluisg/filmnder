@@ -59,9 +59,10 @@ function updateWebValues(){
   var table = document.getElementById("table_alone");
   var num_elements = 0;
 
+  var list_alone = [];
   for(let i = 0; i < max_ind; i++){
     if(i in relations){
-      if(relations[i][user] == 1 && (relations[i][other_user] == 2 || relations[i][other_user] == 3)){
+      if((relations[i][user] == 1 || relations[i][user] == 4) && (relations[i][other_user] == 1 || relations[i][other_user] == 4)){
         var row = table.insertRow(-1);
         var cell = row.insertCell(-1);
         cell.innerHTML = num_elements;
@@ -77,6 +78,10 @@ function updateWebValues(){
         cell.innerHTML = info_films[i]['genre']
         var cell = row.insertCell(-1);
         cell.innerHTML = info_films[i]['rating']
+
+        if(relations[i][other_user] == 4 || relations[i][user] == 4){
+          row.classList.add("table-warning");
+        }
       }
     }
   }

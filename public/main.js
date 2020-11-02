@@ -70,7 +70,7 @@ function filmLiked(){
   console.log('Liked');
   relations[actual_ind][user] = 1;
   checkMatch(actual_ind);
-  updateDatabase();
+  updateDatabase(actual_ind, 1);
 
   actual_ind = nextNotEvaluated(0, max_ind);
   updateWebValues(actual_ind);
@@ -78,7 +78,7 @@ function filmLiked(){
 function filmDisliked(){
   console.log('Disliked')
   relations[actual_ind][user] = 2;
-  updateDatabase();
+  updateDatabase(actual_ind, 2);
 
   actual_ind = nextNotEvaluated(0, max_ind);
   updateWebValues(actual_ind);
@@ -86,7 +86,7 @@ function filmDisliked(){
 function filmSeen(){
   console.log('Seen')
   relations[actual_ind][user] = 3;
-  updateDatabase();
+  updateDatabase(actual_ind, 3);
 
   actual_ind = nextNotEvaluated(0, max_ind);
   updateWebValues(actual_ind);
@@ -95,7 +95,7 @@ function filmRepeat(){
   console.log('Repeat')
   relations[actual_ind][user] = 4;
   checkMatch(actual_ind);
-  updateDatabase();
+  updateDatabase(actual_ind, 4);
 
   actual_ind = nextNotEvaluated(0, max_ind);
   updateWebValues(actual_ind);
@@ -202,7 +202,7 @@ function checkMatch(ind){
   if( (relations[ind][users[0]] == 1 && relations[ind][users[1]] == 1) ||
       (relations[ind][users[0]] == 1 && relations[ind][users[1]] == 4) ||
       (relations[ind][users[0]] == 4 && relations[ind][users[1]] == 1) ){
-    console.log('Match found');
+        $("#matchModal").modal()
   }else{
     console.log('No match found');
   }
@@ -227,6 +227,30 @@ async function getData(){
   return [json_info, json_url, json_rel];
 };
 
-function updateDatabase(){
+async function updateDatabase(id, relation){
   console.log('Updating database');
+  let data = {
+    username: user,
+    id: id,
+    valoration: relation
+  };
+  const data2 = {data};
+
+  //POST
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data2)
+  };
+  const posting = await fetch('/updateRelation', options);
+  const checkpass = await posting.json();
+  console.log('checkpass: '+checkpass.status);
+
+  if(checkpass.status == 'updated'){
+    console.log('Succesfully updated');
+  }else{
+    console.log('An error appeared!');
+  }
 }

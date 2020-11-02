@@ -11,6 +11,27 @@
   </head>
   <body>
 
+    <!-- Modal -->
+    <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body h-100 w-auto">
+            <div class="container-fluid text-center">
+              <img src="images/match.png" alt="MatchLogo" class="img rounded-circle" id="matchlogo">
+              <a class="h3" id="match_title">It's a Match!</a>
+            </div>
+            <img class="img-fluid w-100 h-100" src="images/couplefilm.jpg" alt="Film Poster" id="image_match">
+            <h6 class="h6">You found a film to watch together</h6>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
     <div class="container-fluid text-center">
       <img src="images/logo.png" alt="Logo" class="img-fluid rounded-circle" id="img_logo">
       <a class="text-danger text-uppercase font-weight-bold" id="web_name"> Filmnder </a>
@@ -50,7 +71,7 @@
         </div>
 
         <!-- Buttons Valoration --------------->
-        <div class="container-fluid border">
+        <div class="container-fluid">
           <div class="btn-group w-100 h-25" id="btn_group">
             <button class="btn btn-default" onclick="filmRepeat()">
               <img src="images/yellow-repeat.png" class="valoration" id="repeat" />
