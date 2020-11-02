@@ -216,7 +216,7 @@ function setFontSize(text, element, border){
   //** defines the font size of the text in the element that don't surpass the borders **//
   var actual_width = 1000000000;
   var actual_height = 10000000000;
-  var actual_font_size = 9;
+  var actual_font_size = 15;
 
   while(actual_height > border.offsetHeight || actual_width > border.offsetWidth){
     element.style.fontSize = actual_font_size+'vw';
