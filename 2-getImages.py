@@ -109,18 +109,20 @@ if __name__ == "__main__":
     dblist = myclient.list_database_names()
     if "filmsDB" in dblist:
         print("The database exists.")
-        mydb = myclient["filmsDB"]
+    else:
+        print("A database will be created")
+    mydb = myclient["filmsDB"]
 
-        collist = mydb.list_collection_names()
-        if "url_images" in collist:
-          print("The collection exists. It will be reseted")
-          mycol = mydb["url_images"]
-          mycol.drop()
-        else:
-          print("The collection does not exists. One will be created.")
+    collist = mydb.list_collection_names()
+    if "url_images" in collist:
+      print("The collection exists. It will be reseted")
+      mycol = mydb["url_images"]
+      mycol.drop()
+    else:
+      print("The collection does not exists. One will be created.")
 
-        mycol = mydb["url_images"]
-        mylist = df_urls.to_dict("records")
-        x = mycol.insert_many(mylist)
+    mycol = mydb["url_images"]
+    mylist = df_urls.to_dict("records")
+    x = mycol.insert_many(mylist)
 
     print('Done')

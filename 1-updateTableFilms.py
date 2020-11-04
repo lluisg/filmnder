@@ -48,18 +48,21 @@ print('entering DB')
 dblist = myclient.list_database_names()
 if "filmsDB" in dblist:
     print("The database exists.")
-    mydb = myclient["filmsDB"]
+else:
+    print("A database will be created")
 
-    collist = mydb.list_collection_names()
-    if "films" in collist:
-      print("The collection exists. It will be reseted")
-      mycol = mydb["films"]
-      mycol.drop()
-    else:
-      print("The collection does not exists. One will be created.")
+mydb = myclient["filmsDB"]
 
-    mycol = mydb["films"]
-    x = mycol.insert_many(mylist)
+collist = mydb.list_collection_names()
+if "films" in collist:
+  print("The collection exists. It will be reseted")
+  mycol = mydb["films"]
+  mycol.drop()
+else:
+  print("The collection does not exists. One will be created.")
+
+mycol = mydb["films"]
+x = mycol.insert_many(mylist)
 
 # WRITING EXCEL WITH NEW TABLE ------------------------------------------------
 
