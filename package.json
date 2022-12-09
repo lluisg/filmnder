@@ -6,7 +6,8 @@
   "scripts": {
     "nodemon": "nodemon filmsServer.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node filmsServer.js"
+    "start": "node filmsServer.js",
+    "build": "npm install; npm run build"
   },
   "author": "Lluis Guardia",
   "license": "ISC",
